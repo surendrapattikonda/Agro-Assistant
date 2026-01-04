@@ -1,13 +1,18 @@
 const mongoose =require('mongoose');
 
 const famerSchema=new mongoose.Schema({
-    name:{
+    firstname:{
+        type:String,
+        required:true
+    },
+   lastname:{
         type:String,
         required:true  
     },
     phone:{
         type:String,
-        required:true   
+        required:true,
+        unique:true
     },
     password:{
         type:String,
